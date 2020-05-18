@@ -10,19 +10,19 @@ set('writable_dirs', []);
 
 add('copy_dirs', ['node_modules', 'vendor']);
 
-host('123.57.190.198')
+host('47.93.87.146')
     ->user('root') // 使用 root 账号登录
     ->identityFile('~/.ssh/lance-shop.pem') // 指定登录密钥文件路径
     ->become('www-data') // 以 www-data 身份执行命令
     ->set('deploy_path', '/var/www/shop-deployer'); // 指定部署目录
 
-host('123.57.226.139')
+host('47.93.121.34')
     ->user('root')
     ->identityFile('~/.ssh/lance-shop.pem')
     ->become('www-data')
     ->set('deploy_path', '/var/www/shop'); // 第二台的部署目录与第一台不同
 
-host('123.57.141.144')
+host('101.201.121.134')
     ->user('root')
     ->identityFile('~/.ssh/lance-shop.pem')
     ->become('www-data')
